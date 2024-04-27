@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Formulários</title>
+
+</head>
+
+<body>
+
+	<h1>Cadastro de Professores</h1>
+
+	<hr>
+
+	<form >
+
+		<table>
+			<tr>
+				<td colspan="2">
+					Nome:<br>
+					<input type="text" id="nome" name="nome" size="30" maxlength="30" minlength="3" required spellcheck="false">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Idade:<br>
+					<input type="number" id="Idade" name="idade" min="18" max="50" step="2">
+				</td>
+				<td>
+					Data Nascimento<br>
+					<input type="date" id="dtNasc" name="dtNasc">
+				</td>
+			</tr>
+		</table>
+
+		<br><br>
+		Sexo:<br>
+		Feminino<input type="radio" name="sexo" name="sexo" value="F" checked>
+		Masculino<input type="radio" name="sexo" name="sexo" value="M">
+
+		<br><br>
+		Cargo:<br>
+		<input type="text" id="cargo" name="cargo" value="Professor(a)" readonly>
+
+		<br><br>
+		Cargo 2:<br>
+		<input type="text" id="cargo2" name="cargo2" disabled>
+
+		<br><br>
+		Períodos de Aula:<br>
+		Manhã <input type="checkbox" id="manha" name="manha">
+		Tarde <input type="checkbox" id="tarde" name="tarde" checked>
+		Noite <input type="checkbox" id= "noite" name="noite">
+
+		<br><br>
+		Curso:<br>
+		<select id="curso" name="curso">
+			<option selected></option>
+			<option value="Agrimensura">Agrimensura</option>
+			<option value="Desenvolvimento de Sistemas">Desenvolvimento de Sistemas</option>
+			<option value="Edificações">Edificações</option>
+			<option value="Enfermagem">Enfermagem</option>
+			<option value="Mecânica">Mecânica</option>
+			<option value="Protése Dentária">Protése Dentária</option>
+			<option value="Qualidade">Qualidade</option>
+		</select>
+
+		<br><br>
+		Disciplina:<br>
+		<select id="disciplina" name="disciplina">
+			<option></option>
+			<optgroup label="Desenvolvimento de Sistemas">
+			<option value="DAW">DAW</option>
+			<option value="Lógica">Lógica</option>
+			<option value="BD">BD</option>
+			<option value="DAD">DAD</option>
+			<option value="DAM">DAM</option>
+			</optgroup>
+			<optgroup label="Enfermagem">
+			<option value="Curativos">Curativos</option>
+			<option value="Medicamentos">Medicamentos</option>
+			<option value="Anatomia">Anatomia</option>
+			<option value="Cuidados Básicos">Cuidados Básicos</option>
+			</optgroup>
+		</select>
+
+		<br><br>
+		Conteúdo:<br>
+		<small>(ctrl+click p/selecionar várias opções)</small><br>
+		<select id="conteudo" name="conteudo" size=4 multiple>
+			<option selected></option>
+			<option value="HTML">HTML</option>
+			<option value="CSS">CSS</option>
+			<option value="JS">JS</option>
+			<option value="Java">Java</option>
+			<option value="PHP">PHP</option>
+			<option value="SQL">SQL</option>
+		</select>
+
+		<br><br>
+		Conhecimento: <br>
+		<input type="text" name="conhecimento" list="lista-conhecimento">
+		<datalist id="lista-conhecimento">
+			<option value="HTML5">HTML5</option>
+			<option value="HTML4">HTML4</option>
+			<option value="CSS">CSS</option>
+			<option value="PHP">PHP</option>
+		</datalist>
+
+		<br><br>
+		E-mail:<br>
+		<input type="email" id="email" name="email" required>
+
+		<br><br>
+		Senha:<br>
+		<input type="password" id="senha" name="senha" minlength="8" maxlength="10" required placeholder="De 8 a 10 caracteres">
+
+		<br><br>
+		Foto:<br>
+		<input type="file" name="foto" name="foto" accept="image/*">
+
+		<br><br>
+		Cor preferida:<br>
+		<input type="color" id="corpref" name="corpref">
+
+		<br><br>
+		Cor uniforme:<br>
+		<input type="color" id="uniforme" name="uniforme" list="corUniforme" value="#FF0000"><br>
+		<datalist id="corUniforme">
+			<option value="#FF0000">Vermelho</option>
+			<option value="#FFA500">Laranja</option>
+			<option value="#FFFF00">Amarelo</option>
+			<option value="#008000">Verde</option>
+			<option value="#0000FF">Azul</option>
+		</datalist>
+
+		<br><br>
+		Celular:<br>
+		<input type="tel" id="celular" name="celular" placeholder="(99)9999-9999">
+
+		<br><br>
+		LinkedIn:<br>
+		<input type="url" id="linkedin" name="linkedin">
+
+		<br><br>
+		Avalie sua capacitação: (De 0 a 10)<br>
+		<input type="range" id="capacitacao" name="capacitacao" min="0" max="10" value="10">
+
+		<br><br>
+		Fale um pouco sobre você:<br>
+		<textarea id="resumo" name="resumo" cols="30" rows="6" maxlength="150" spellcheck="false"></textarea>
+
+		<br><br>
+
+		<fieldset>
+			<legend><small>Informações de Cadastro</small></legend>
+		Data e hora do cadastro<br>
+		<input type="datetime-local" id="dtHrCad" name="dtHrCad">
+
+		<br><br>
+		Data e hora do cadastro<br>
+		<input type="time" id="dtCad" name="dtCad">
+
+		<br><br>
+		Mês do cadastro<br>
+		<input type="month" id="mesCad" name="mesCad">
+
+		<br><br>
+		Semana do cadastro<br>
+		<input type="week" id="wkCad" name="wkCad">
+		</fieldset>
+
+		<hr>
+
+		<input type="submit" value="Cadastrar" name="">
+		<input type="button" value="Teste" onclick="alert('Testando');">
+		<input type="reset" value="Limpar">
+
+	</form>
+
+</body>
+
+</html>
