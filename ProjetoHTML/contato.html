@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario Contato</title>
+
+	<style>
+		img {
+  		width: 30%;
+  		height: 350px;
+		}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+        }
+
+         ul {
+            font-size: 1.5em;
+            line-height: 1;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .sidebar {
+            width: 40%;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content {
+            width: 80%;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
+        .form-item {
+            margin: 15px 0;
+            margin-left: 20px;
+        }
+
+form {
+            margin-left: 20px; /* Adiciona margem à esquerda ao formulário */
+        }
+
+        table {
+            margin-left: 20px; /* Adiciona margem à esquerda à tabela */
+        }
+
+        input, textarea, select {
+            margin-left: 20px; /* Adiciona margem à esquerda aos inputs, textarea e select */
+        }
+
+	h2{
+	margin-left: 20px
+	}
+    </style>
+
+</head>
+
+<body>
+	<h2>Entre em contato</h2>
+	<form>
+		<table>
+			<tr class="form-item">
+				<td colspan="2">
+					Nome:<br>
+					<input type="text" id="nome" name="nome" size="30" maxlength="30" minlength="3" required spellcheck="false"><br><br>
+				</td>
+			</tr>
+			<tr class="form-item">
+				<td>
+					Data<br>
+					<input type="date" id="dtNasc" name="dtNasc"><br>
+				</td>
+			</tr>
+		</table>
+
+		<div class="form-item">
+			E-mail:<br>
+			<input type="email" id="email" name="email" required>
+		</div>
+
+		<div class="form-item">
+			Sexo:<br>
+			Feminino<input type="radio" name="sexo" value="F" checked>
+			Masculino<input type="radio" name="sexo" value="M">
+			Não informar<input type="radio" name="sexo" value="NI">
+		</div>
+
+		<div class="form-item">
+			Celular:<br>
+			<input type="tel" id="celular" name="celular" placeholder="(99)9999-9999">
+		</div>
+
+		<div class="form-item">
+			Dê seu feedback:<br>
+			<textarea id="resumo" name="resumo" cols="30" rows="6" maxlength="150" spellcheck="false" required></textarea>
+		</div>
+		
+		<hr>
+
+		<div class="form-item">
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Limpar">
+		</div>
+	</form>
+</body>
+</html>
